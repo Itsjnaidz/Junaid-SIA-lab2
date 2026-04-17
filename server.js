@@ -4,6 +4,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('.'));
 
 app.get('/', (req, res) => {
     res.send("<h1>Welcome to the PUBG Armory API</h1><p>The system is integrated and live! Visit <a href='/weapons'>/weapons</a> to see the data.</p>");
