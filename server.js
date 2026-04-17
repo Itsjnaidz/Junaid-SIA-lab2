@@ -5,6 +5,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send("<h1>Welcome to the PUBG Armory API</h1><p>The system is integrated and live! Visit <a href='/weapons'>/weapons</a> to see the data.</p>");
+});
 // Dataset: 10+ items
 let weapons = [
     { id: 1, name: "M416", type: "AR", damage: 41, ammo: "5.56mm", rarity: "Common" },
