@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PUBG Armory - System Integration</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .card { background: #333; padding: 15px; border-radius: 8px; border-left: 5px solid #f39c12; }
+        .controls { margin-bottom: 30px; }
+        input, button { padding: 10px; border-radius: 5px; border: none; }
+        button { background: #f39c12; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>PUBG Weapon Database</h1>
+    
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search weapon name...">
+        <button onclick="searchWeapons()">Search</button>
+        <button onclick="fetchWeapons()">View All</button>
+        <button onclick="fetchTopDamage()">Top Damage</button>
+    </div>
+
+    <div id="weapon-list" class="grid">
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
